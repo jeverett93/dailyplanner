@@ -1,1 +1,1 @@
-# jquerycalculator
+# jqueryplanner

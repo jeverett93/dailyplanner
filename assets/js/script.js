@@ -4,6 +4,7 @@ $(document).ready(function(){
 var dayAndTime = moment().format('LLLL');
 var container = $("#container");
 var workHours = ["9 AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
+var savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
 $("#currentDay").append(dayAndTime);
 
@@ -15,17 +16,31 @@ function createTimeBlocks() {
             '<div class="input-group-prepend">' +
             '<span class="input-group-text">' + workHours[i] + '</span>' +
             '</div>' +
-            '<input type="text" class="form-control" id="' + workHours[i] + '">' +
+            '<input type="text" class="form-control" id="user-input"' + workHours[i] + '">' +
             '<div class="input-group-append">' +
-            '<button class="btn btn-primary" data-time="' + workHours[i] + '"><i class="fa fa-save"></i></button>' +
+            '<button class="btn btn-primary" id="save-button" data-time="'  + workHours[i] + '"><i class="fa fa-save"></i></button>' +
             '</div>' +
             '</div>';
         blocks += hourBlock;
     }
     container.append(blocks);
+
+    $("#save-button").on("click", function() {
+        var userTask = $("#user-input").val();
+        alert(userTask);
+        savedTasks.push(userTask);
+    });
+
+
+    
 }
 
 createTimeBlocks();
+console.log(savedTasks);
+
+
+    
+
 
 })
 

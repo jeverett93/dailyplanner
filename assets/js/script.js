@@ -10,7 +10,7 @@ $("#currentDay").append(dayAndTime);
 
 function createTimeBlocks() {
     var blocks = "";
-    for (let i = 0; i < workHours.length; i++) {
+    for (var i = 0; i < workHours.length; i++) {
         var hourBlock = "" +
             '<div class="input-group mb-3">' +
             '<div class="input-group-prepend">' +
@@ -29,6 +29,7 @@ function createTimeBlocks() {
         var userTask = $("#user-input").val();
         alert(userTask);
         savedTasks.push(userTask);
+        localStorage.setItem("tasks", JSON.stringify(savedTasks));
     });
 
 

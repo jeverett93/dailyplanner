@@ -24,6 +24,7 @@ function setColor(time) {
 }
 
 function createTimeBlocks() {
+  var blocks = "";
   Object.keys(savedTasks).forEach(function(time) {
     var hourBlock = "" +
         '<div class="input-group mb-3">' +

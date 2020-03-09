@@ -29,13 +29,13 @@ function createTimeBlocks() {
 
     function setColor(time) {
       if (time === currentSlot) {
-        return 'green'
+        return 'lavender'
       }
       if (time > currentSlot) {
-        return 'red'
+        return 'pink'
       }
       if (time < currentSlot) {
-        return 'blue'
+        return 'aqua'
       }
     }
 

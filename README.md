@@ -1,6 +1,6 @@
-# jqueryplanner
+# dailyyplanner
 
-# Live Link: https://jeverett93.github.io/jqueryplanner/
+# Live Link: https://jeverett93.github.io/dailyplanner/
 
 # About: 
 This is a simple calendar application that allows the user to save events for each hour of the day. It also color codes past present, and future events.

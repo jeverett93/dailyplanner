@@ -24,7 +24,7 @@ function createTimeBlocks() {
       if (time < currentSlot) {
         return 'aqua'
       }
-      if (time === null) {
+      if (time != currentSlot) {
         return 'aqua'
       }
     }

@@ -15,13 +15,13 @@ function createTimeBlocks() {
    
 
     function setColor(time) {
-      if (time === currentSlot) {
+      if (time === parseInt(currentSlot)) {
         return 'lavender'
       }
-      if (time > currentSlot) {
+      if (time > parseInt(currentSlot)) {
         return 'pink'
       }
-      if (time < currentSlot) {
+      if (time < parseInt(currentSlot)) {
         return 'aqua'
       }
     }

@@ -24,6 +24,9 @@ function createTimeBlocks() {
       if (time < currentSlot) {
         return 'aqua'
       }
+      if (time === null) {
+        return 'aqua'
+      }
     }
 
     Object.keys(savedTasks).forEach(function(time) {

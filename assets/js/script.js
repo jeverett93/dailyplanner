@@ -22,7 +22,7 @@ function createTimeBlocks() {
           '<div class="input-group-prepend">' +
           '<span class="input-group-text">' + time + ":00" + '</span>' +
           '</div>' +
-          `<input type="text" class="form-control" id="input-${time}" value="${savedTasks[time]}"/>` +
+          `<input type="text" class="form-control" id="input-${time}" value="${savedTasks[time] ? savedTasks[time] : ''}"/>` +
           '<div class="input-group-append">' +
           '<button class="btn btn-primary save-button" data-time="'  + time + '"><i class="fa fa-save"></i></button>' +
           '</div>' +
@@ -30,9 +30,9 @@ function createTimeBlocks() {
           
       blocks += hourBlock;
 
-      // if (savedTasks[time] == null){
-      //   savedTasks.push("");
-      // };
+      if (savedTasks[time] == null){
+        savedTasks.push("");
+      };
 
       console.log(hourBlock);
 

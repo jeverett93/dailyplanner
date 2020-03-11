@@ -30,9 +30,9 @@ function createTimeBlocks() {
           
       blocks += hourBlock;
 
-      // if (savedTasks[time] == null){
-      //   savedTasks.push("");
-      // };
+      if (savedTasks[time] == null){
+        savedTasks.push("");
+      };
 
       console.log(hourBlock);
 
